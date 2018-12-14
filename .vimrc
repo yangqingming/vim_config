@@ -27,6 +27,8 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'terryma/vim-expand-region'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'kien/ctrlp.vim'
+Bundle 'rkulla/pydiction'
+Bundle 'scrooloose/nerdcommenter'
 "Bundle 'TagHighlight'
 
 filetype plugin indent on     " required!
@@ -47,9 +49,9 @@ filetype plugin indent on     " required!
 let g:EasyMotion_leader_key = 'f'		
 
 "Bundle 'Valloric/YouCompleteMe' 
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-let g:ycm_collect_identifiers_from_tag_files = 1
+"let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+"nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+"let g:ycm_collect_identifiers_from_tag_files = 1
 
 "Bundle 'tomasr/molokai'
 colorscheme molokai
@@ -128,5 +130,12 @@ xnoremap p pgvy
 vmap <C-c> "+y
 map <C-v> <esc>"+p
 imap <C-v> <esc>"+pi
-map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR> "生成ctags
+map <F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR> "生成ctags
 
+" 设置NerdTree
+"
+map <F3> :NERDTreeMirror<CR>
+map <F3> :NERDTreeToggle<CR>
+
+let g:pydiction_location = '~/.vim/bundle/pydiction'
+let g:pydiction_menu_height = 3
