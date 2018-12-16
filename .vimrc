@@ -1,13 +1,13 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
- 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
- 
+syntax on
+set backspace=indent,eol,start
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 " let Vundle manage Vundle
 " " required!
-Bundle 'tpope/vim-pathogen'
-Bundle 'gmarik/vundle'
+Plugin 'tpope/vim-pathogen'
+Plugin 'VundleVim/Vundle.vim'
 Bundle 'bling/vim-airline' 
 Bundle 'L9'
 Bundle 'minibufexpl.vim'
@@ -29,9 +29,13 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'kien/ctrlp.vim'
 Bundle 'rkulla/pydiction'
 Bundle 'scrooloose/nerdcommenter'
+Plugin 'wincent/command-t' 
 "Bundle 'TagHighlight'
-
-filetype plugin indent on     " required!
+"ll of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+" "filetype plugin on
 "   "
 "   " Brief help  -- 此处后面都是vundle的使用命令
 "   " :BundleList          - list configured bundles
@@ -50,8 +54,8 @@ let g:EasyMotion_leader_key = 'f'
 
 "Bundle 'Valloric/YouCompleteMe' 
 "let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-"nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-"let g:ycm_collect_identifiers_from_tag_files = 1
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+let g:ycm_collect_identifiers_from_tag_files = 1
 
 "Bundle 'tomasr/molokai'
 colorscheme molokai
